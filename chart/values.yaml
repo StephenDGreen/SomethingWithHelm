@@ -1,0 +1,19 @@
+environment: development
+
+apphost: k8s
+
+label:
+  name: somethingcore
+
+container:
+  name: something
+  pullPolicy: IfNotPresent
+  image: somethingapi
+  tag: v1
+  port: 80
+
+replicas: 1
+
+service:
+  port: 8888
+  type: ClusterIP
